@@ -18,7 +18,7 @@ $_SESSION["access"] = true;
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title> Aula de Banco de Dados</title>
+        <title>CRUD PHP</title>
 </head>
 <body>
 <?php
