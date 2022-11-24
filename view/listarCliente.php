@@ -1,4 +1,5 @@
 <?php
+    // Login
     if(!isset($_SESSION["access"])) {
         header("Location:../login.php");
     }
@@ -8,7 +9,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title> Aula de Banco de Dados</title>
+        <title>Banco de Dados</title>
 </head>
 <body>
 <table>
@@ -21,6 +22,7 @@
             <th>Alterar</th>
         </tr>
     <?php
+    // Dados do cliente para inserir
     $clientes = listarClientes();
     foreach($clientes as $cli){
         echo "<tr>";
@@ -32,7 +34,7 @@
         echo "<td><a href=\"./?p=alt&altera=".$cli["ID"]."\"> Alterar </a></td>";
         echo "</tr>";
     }
-
+    
     if (isset($_GET["deleta"])){
         deletaCliente($_GET["deleta"]);
     }
