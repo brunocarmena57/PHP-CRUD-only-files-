@@ -28,9 +28,11 @@ $_SESSION["access"] = true;
     <?php
     echo "<hr>";
 
-
+    // Trazer Menú
     require_once("./menu.php");
     isset($_GET["p"])? $page = $_GET["p"] : $page = "home";
+    
+    // Cases para mudar de página
     switch($page){
         case "home":
             require_once("./view/listarCliente.php");
