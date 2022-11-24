@@ -1,14 +1,16 @@
 <?php
 session_start();
-$user = "teste";
-$password = password_hash("123", PASSWORD_DEFAULT);
+
+// Login com um usuário e password específico
+$user = "1";
+$password = password_hash("12", PASSWORD_DEFAULT);
 
 if(isset($_SESSION["user"])) {
     header("Location:./index.php");
 
 }
 
-
+// Validação do password com retorno
 if(isset($_POST["user"])) {
     if($_POST["user"] == $user &&
      password_verify($_POST["password"], $password))
@@ -22,7 +24,6 @@ if(isset($_POST["user"])) {
 
     }
 }
-
 
 ?>
 
