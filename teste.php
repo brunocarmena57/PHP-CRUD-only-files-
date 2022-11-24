@@ -1,8 +1,10 @@
 <?php
 session_start();
+// Criação das cookies e adicionado os timer
 setcookie("numero[um]", "Valor1", time()+3600);
 setcookie("numero[dois]", "Valor2", time()+3600);
 
+// Nome da cookie
 $_COOKIE["nome"] = "meu cookie";
 
 echo $_COOKIE["nome"];
@@ -21,6 +23,7 @@ $_SESSION["minhasessao"] = "Conteúdo da Minha sessao";
 
 echo $_SESSION["minhasessao"];
 
+// Cookie com incremento mostrado na tela
 if(isset($_SESSION["soma"])){
     if($_SESSION["soma"] > 10){
         unset($_SESSION["soma"]);
@@ -34,8 +37,8 @@ if(isset($_SESSION["soma"])){
 }
 
 echo "<hr>";
-
-$email = "joao.paulo@zitus.com";
+// Inserção do email com validação
+$email = "bruno.carmena@gmail.com";
 
 echo filter_var($email, FILTER_VALIDATE_EMAIL)?"Email é valido": "Email Inválido";
 
