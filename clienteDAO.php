@@ -2,7 +2,7 @@
 
 function conectaDB(){
     //Criando uma conexão com o banco de dados
-    return new PDO("mysql:host=localhost;dbname=aulaphpbrunor", "root", "");
+    return new PDO("mysql:host=localhost;dbname=clientesbruno", "root", "");
 }
 
 // Inserta os valores no banco de dados table clientes
