@@ -5,7 +5,7 @@ require_once("./controller/cliente.php");
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title> Aula de Banco de Dados</title>
+        <title>Banco de Dados</title>
 </head>
 <body>
     <?php
